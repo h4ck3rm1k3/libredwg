@@ -248,6 +248,8 @@ void
 dwg_encode_handleref_with_code(Bit_Chain * dat, Dwg_Object * obj,Dwg_Data* dwg, Dwg_Object_Ref* ref, int code);
 void
 dwg_encode_add_object(Dwg_Object * obj, Bit_Chain * dat, long unsigned int address);
+void 
+dwg_encode_common_entity_handle_data(Bit_Chain * dat, Dwg_Object * obj); 
 
 /*--------------------------------------------------------------------------------
  * Public variables

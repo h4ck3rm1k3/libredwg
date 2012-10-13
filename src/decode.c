@@ -277,6 +277,8 @@ resolve_objectref_vector(Dwg_Data * dwg);
 
 int decode_R13_R15(Bit_Chain* dat, Dwg_Data * dwg); // froward
 int read_r2007_meta_data(Bit_Chain *dat, Dwg_Data *dwg);
+int decode_R2004(Bit_Chain* dat, Dwg_Data * dwg); // forward
+int decode_R2007(Bit_Chain* dat, Dwg_Data * dwg); // forward
 
 /*--------------------------------------------------------------------------------
  * Public variables
@@ -2136,7 +2138,7 @@ dwg_resolve_handle(Dwg_Data* dwg, long unsigned int absref)
   return 0;
 }
 
-static Dwg_Object_Ref *
+inline Dwg_Object_Ref *
 dwg_decode_handleref(Bit_Chain * dat, Dwg_Object * obj, Dwg_Data* dwg)
 {
   // Welcome to the house of evil code!
@@ -2205,7 +2207,7 @@ dwg_decode_handleref(Bit_Chain * dat, Dwg_Object * obj, Dwg_Data* dwg)
   return ref;
 }
 
-static Dwg_Object_Ref *
+inline Dwg_Object_Ref *
 dwg_decode_handleref_with_code(Bit_Chain * dat, Dwg_Object * obj, Dwg_Data* dwg, unsigned int code)
 {
   Dwg_Object_Ref * ref;
@@ -2237,7 +2239,7 @@ dwg_decode_header_variables(Bit_Chain* dat, Dwg_Data * dwg)
   #include "header_variables.spec"
 }
 
-static void
+inline void
 dwg_decode_common_entity_handle_data(Bit_Chain * dat, Dwg_Object * obj)
 {
 

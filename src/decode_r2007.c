@@ -25,8 +25,6 @@
 
 static unsigned int loglevel;
 
-#define DWG_LOGLEVEL loglevel
-
 typedef struct r2007_file_header
 {
   int64_t header_size;            // 0x70
